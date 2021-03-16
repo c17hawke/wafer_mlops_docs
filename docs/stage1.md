@@ -6,8 +6,13 @@
     Replace the text mentioned as `<some_txt>` with your preferred choice.
 
 ## STEP 1 Create a new conda environment
+* Open an anaconda prompt and create an environment -
 ```bash
-conda create -n <you_env_name> python=3.7 -y
+conda create -n <your_env_name> python=3.7 -y
+```
+* activate the environment -
+```bash
+conda activate <your_env_name>
 ```
 
 ## STEP 2 Create a default structure
