@@ -1,0 +1,51 @@
+# Project information
+site_name: REPO_NAME_OR_SITE_NAME
+# defeine TOC or order of website-
+nav:
+  - Home: index.md
+  - Feedback: feedback.md
+
+site_author: Sunny Bhaveen Chandra
+site_description: >-
+  DESCRIPTION
+
+# Repository
+repo_name: c17hawke/REPO_NAME
+repo_url: https://github.com/c17hawke/REPO_NAME
+
+# Configuration
+theme:
+  name: material
+  features:
+    - tabs
+  language: en
+  palette:
+    primary: green
+    accent: green
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/c17hawke
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/c17hawke
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/c17hawke
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/c17hawke/
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
+markdown_extensions:
+  - codehilite:
+      linenums: true
+  - admonition
+  - pymdownx.arithmatex
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - pymdownx.highlight
+
+copyright: |
+  &copy; 2020 <a href="https://github.com/c17hawke"  target="_blank" rel="noopener">Sunny Bhaveen Chandra</a>
