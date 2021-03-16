@@ -1,17 +1,11 @@
-# Welcome to MkDocs
+# WAFER ML-OPS docs
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## Prerequisites
 
-## Commands
+### For the overview of the Wafer project refer this video -
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+<iframe width="630" height="330" src="https://www.youtube.com/embed/rsNAb1KmvFI?start=25157" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Project layout
+### For mlflow overview refer - 
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+<iframe width="630" height="330" src="https://www.youtube.com/embed/3XSfxv5RMxE?start=7" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
