@@ -146,7 +146,8 @@ git add .dvc/config && git commit -m "Configure remote storage"
 ```
 !!! NOTE 
     Get the <DRIVE ID> as shown in the higlighted part in the below screenshot-
-    ![](https://github.com/c17hawke/wafer_mlops_docs/blob/main/docs/img/gdrive_id.png)
+    
+    ![](https://github.com/c17hawke/wafer_mlops_docs/blob/main/docs/img/gdrive_id.png?raw=true)
 
 ## STEP 11 Add Gdrive credential secrets in github repo secrets. 
 * Find this credentials in the given path - 
