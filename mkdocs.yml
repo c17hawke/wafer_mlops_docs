@@ -3,6 +3,7 @@ site_name: WAFER ML-OPS docs
 # defeine TOC or order of website-
 nav:
   - Home: index.md
+  - Project: project.md
   - Reference: reference.md
 
 site_author: Sunny Bhaveen Chandra
