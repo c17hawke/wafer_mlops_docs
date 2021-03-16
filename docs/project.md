@@ -3,6 +3,8 @@
 
 To build a classification methodology to predict the quality of wafer sensors based on the given training data. 
 
+#### get dataset from [here](https://github.com/iNeuron-Pvt-Ltd/wafer-dataset) 
+
 ## Workflow
 
 ![](https://github.com/c17hawke/wafer_mlops_docs/blob/main/docs/img/workflow.jpg?raw=true)
