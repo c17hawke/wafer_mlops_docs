@@ -2,3 +2,4 @@
 
 ## visit docs at [wafer mlops docs](https://c17hawke.github.io/wafer_mlops_docs/)
 
+## main project repository [https://github.com/c17hawke/mlops_main]
