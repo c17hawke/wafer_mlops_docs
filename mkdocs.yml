@@ -22,8 +22,8 @@ theme:
     - tabs
   language: en
   palette:
-    primary: green
-    accent: green
+    primary: teal
+    accent: teal
 
 extra:
   social:

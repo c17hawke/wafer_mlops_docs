@@ -2,10 +2,12 @@
 
 ## Steps and important commands
 
+## STEP 1
 ### Get dataset from the [dataset repository](https://github.com/iNeuron-Pvt-Ltd/wafer-dataset) or- 
 [Download Dataset](https://github.com/iNeuron-Pvt-Ltd/wafer-dataset/archive/main.zip){ .md-button } 
 
-## Create a default structure -
+
+## STEP 2 Create a default structure
 Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a> cookiecutterdatascience
 
 ---
@@ -58,14 +60,17 @@ Project based on the <a target="_blank" href="https://drivendata.github.io/cooki
 
 ---
 
+## STEP 3 Initialize git in Current working directory
 ```bash
 git init
 ```
 
+## STEP 4 Intialize DVC
 ```bash
 dvc init
 ```
 
+## STEP 5 Do the first commit and push to the remote repository
 ```bash
 git add . && git commit -m "first commit"
 git branch -M main
@@ -73,51 +78,52 @@ git remote add origin https://github.com/<USERNAME>/<REPONAME>.git
 git push -u origin main
 ```
 
+## STEP 6 Create and checkout a development branch 
 ```bash 
 git checkout -b dev
 ```
 
-One line readme update and push command to dev branch-
-```bash
-git add README.md && git commit -m "update readme" && git push origin dev
-```
+!!! Info "One line readme update and push command to dev branch-"
+    ```bash
+    git add README.md && git commit -m "update readme" && git push origin dev
+    ```
 
-add data 
+## STEP 7 Add data 
 
 ```bash
 dvc add Training_Batch_Files/*.csv Prediction_Batch_files/*.csv
 ```
-```bash
-git add data/data.xml.dvc data/.gitignore && git commit -m "Add raw data"
-```
 
-install dvc for gdrive
+## STEP 8 Git Add dvc file generated from above step 
+
+```bash
+git add . && git commit -m "Add raw data"
+```
+## STEP 9 Install dvc for gdrive
 
 ```bash
 pip install dvc[gdrive]
 ```
-
-add remote storage
+## STEP 10 Add remote storage
 
 ```bash
 dvc remote add -d storage gdrive://<DRIVE ID>
 
 git add .dvc/config && git commit -m "Configure remote storage"
 ```
-
-add gdrive credential secrets in github repo secrets. this credentials can be found in 
+## STEP 11 Add gdrive credential secrets in github repo secrets. this credentials can be found in 
 `.dvc >> temp >> gdrive-user-credentials.json`
 
-push the data to remote -
+## STEP 11 Push the data to remote -
 
 ```bash
 dvc push
 ```
 
-to retrived data
-```bash
-dvc pull
-```
+!!! Info "To retrived data"
+    ```bash
+    dvc pull
+    ```
 
-refer [dvc-data-versioning](https://dvc.org/doc/start/data-versioning) to know more
+    refer [dvc-data-versioning](https://dvc.org/doc/start/data-versioning) to know more
 
