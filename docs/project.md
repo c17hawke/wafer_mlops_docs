@@ -5,7 +5,7 @@ To build a classification methodology to predict the quality of wafer sensors ba
 
 ## Workflow
 
-
+![](docs/img/mlFlow.png)
 
 ## Data Description
 
