@@ -1,16 +1,34 @@
 # Stage 1: Data preparation
 
-## Steps and important commands
+## Steps and important commands to begin-
 
-## STEP 1
-### Get dataset from the [dataset repository](https://github.com/iNeuron-Pvt-Ltd/wafer-dataset) or- 
-[Download Dataset](https://github.com/iNeuron-Pvt-Ltd/wafer-dataset/archive/main.zip){ .md-button } 
+!!! NOTE
+    Replace the text mentioned as `<some_txt>` with your preferred choice.
 
+## STEP 1 Create a new conda environment
+```bash
+conda create -n <you_env_name> python=3.7 -y
+```
 
 ## STEP 2 Create a default structure
-Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a> cookiecutterdatascience
+* Install cookiecutter template
+    ```bash
+    pip install cookiecutter
+    ```
+* Start a new project
+    ```bash
+    cookiecutter https://github.com/drivendata/cookiecutter-data-science
+    ```
+* after above step you'll be given options in the command line.
+>    1. project_name:
+>    2. repo_name:
+>    3. author_name:
+>    4. description:
+>    5. Select open_source_license:
+>    6. s3_bucket `[Optional]`:
+>    7. Select python_interpreter:
 
----
+Once you are done with above step you'll see a following directory structure inside a directory by your given *project_name*
 
 ### Project Organization
     ├── LICENSE
@@ -59,62 +77,86 @@ Project based on the <a target="_blank" href="https://drivendata.github.io/cooki
     └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
 
 ---
+Now open the project in your favourite code editor.
 
-## STEP 3 Initialize git in Current working directory
+## STEP 3
+### Get the dataset 
+* Clone it from the [dataset repository](https://github.com/iNeuron-Pvt-Ltd/wafer-dataset) or directly- 
+
+>> [Download Dataset](https://github.com/iNeuron-Pvt-Ltd/wafer-dataset/archive/main.zip){ .md-button } 
+
+* Now extract the *Prediction_Batch_files*, *Training_Batch_Files* directory in the root directory of the project
+
+## STEP 4 Initialize git in Current working directory in your terminal, command prompt or git bash.
 ```bash
 git init
 ```
+!!! Note
+    If git is not installed in your system then download it from [GIT-SCM](https://git-scm.com/) site
 
-## STEP 4 Intialize DVC
+## STEP 5 Install DVC and its gdrive extension
+```bash
+pip install dvc
+pip install dvc[gdrive]
+```
+
+## STEP 6 Intialize DVC
 ```bash
 dvc init
 ```
 
-## STEP 5 Do the first commit and push to the remote repository
-```bash
-git add . && git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/<USERNAME>/<REPONAME>.git
-git push -u origin main
-```
-
-## STEP 6 Create and checkout a development branch 
-```bash 
-git checkout -b dev
-```
-
-!!! Info "One line readme update and push command to dev branch-"
-    ```bash
-    git add README.md && git commit -m "update readme" && git push origin dev
-    ```
-
-## STEP 7 Add data 
+## STEP 7 Add data into dvc for tracking
 
 ```bash
 dvc add Training_Batch_Files/*.csv Prediction_Batch_files/*.csv
 ```
 
-## STEP 8 Git Add dvc file generated from above step 
-
+## STEP 8 Do the first commit and push to the remote repository
+run below commands on by one -
 ```bash
-git add . && git commit -m "Add raw data"
+git add . && git commit -m "first commit and added raw data"
 ```
-## STEP 9 Install dvc for gdrive
-
 ```bash
-pip install dvc[gdrive]
+git branch -M main
 ```
+```bash
+git remote add origin https://github.com/<USERNAME>/<REPONAME>.git
+```
+```bash
+git push -u origin main
+```
+!!! Note
+    replace `<USERNAME>` and `<REPONAME>` as per you.
+
+## STEP 9 Create and checkout a development branch for our development
+```bash 
+git checkout -b dev
+```
+
 ## STEP 10 Add remote storage
-
 ```bash
 dvc remote add -d storage gdrive://<DRIVE ID>
 
 git add .dvc/config && git commit -m "Configure remote storage"
 ```
-## STEP 11 Add gdrive credential secrets in github repo secrets. this credentials can be found in 
-`.dvc >> temp >> gdrive-user-credentials.json`
+!!! NOTE 
+    Get the <DRIVE ID> as shown in the higlighted part in the below screenshot-
+    ![](https://github.com/c17hawke/wafer_mlops_docs/blob/main/docs/img/gdrive_id.png)
 
-## STEP 11 Push the data to remote -
+## STEP 11 Add Gdrive credential secrets in github repo secrets. 
+* Find this credentials in the given path - 
+
+    `.dvc >> temp >> gdrive-user-credentials.json`
+
+* Now to add the secrets in your github repo -
+
+    * Go to settings
+    * secrets
+    * Click on add secrets
+    * Give name of secretes
+    * Paste the json file content from `gdrive-user-credentials.json`
+
+## STEP 12 Push the data to remote -
 
 ```bash
 dvc push
@@ -127,3 +169,15 @@ dvc push
 
     refer [dvc-data-versioning](https://dvc.org/doc/start/data-versioning) to know more
 
+## STEP 11 Install full requirements.txt as given in the repository
+```bash
+pip install -r requirements.txt
+```
+
+!!! Info "One line readme update and push command to dev branch-"
+    ```bash
+    git add README.md && git commit -m "update readme" && git push origin dev
+    ```
+## STEP 12 Now you can follow along after this point as shown in the folowing video -
+
+<iframe width="630" height="330" src="https://www.youtube.com/embed/Ly3Dor8HZUA?start=6883" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
