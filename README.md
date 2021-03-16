@@ -1,6 +1,2 @@
-# docsTemplate
-its just a template Repository for documentation
+visit https://c17hawke.github.io/wafer_mlops_docs/
 
-```
-git clone https://github.com/c17hawke/docsTemplate
-```
