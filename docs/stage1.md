@@ -10,7 +10,7 @@
 ```bash
 conda create -n <your_env_name> python=3.7 -y
 ```
-* activate the environment -
+* Activate the environment -
 ```bash
 conda activate <your_env_name>
 ```
@@ -24,7 +24,7 @@ conda activate <your_env_name>
     ```bash
     cookiecutter https://github.com/drivendata/cookiecutter-data-science
     ```
-* after above step you'll be given options in the command line.
+* After above step you'll be given options in the command line.
 >    1. project_name:
 >    2. repo_name:
 >    3. author_name:
