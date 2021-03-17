@@ -4,7 +4,7 @@ site_name: WAFER ML-OPS docs
 nav:
   - Home: index.md
   - Project: project.md
-  - Pipeline Stage 1 (Initial setup): stage1.md
+  - Pipeline Stage 1 (Initial setup): stage1_init_setup.md
   - Reference: reference.md
 
 site_author: Sunny Bhaveen Chandra

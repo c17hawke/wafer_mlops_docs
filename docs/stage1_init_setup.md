@@ -1,5 +1,11 @@
 # Stage 1: Data preparation (Day 1: Initial setup)
 
+## Main repository link:
+* On top right corner next to the search bar link for the main repo is given or [click here]() to see the main repo
+
+!!! Note
+    The main repo contains various branch so make sure you select a branch which has the latest commit to see the recent updates.
+
 ## Steps and important commands to begin-
 
 !!! NOTE
@@ -115,6 +121,29 @@ dvc init
 ```bash
 dvc add Training_Batch_Files/*.csv Prediction_Batch_files/*.csv
 ```
+
+!!! Warning 
+    Above command will not work for windows users so they can create and run the following file in the root of their project
+
+    ```python
+    # NOTE: For windows user-
+    # This file must be created in the root of the project 
+    # where Training and Prediction batch file as are present
+
+    import os
+    from glob import glob
+
+
+    data_dirs = ["Training_Batch_Files","Prediction_Batch_files"]
+
+    for data_dir in data_dirs:
+        files = glob(data_dir + r"/*.csv")
+        for filePath in files:
+            # print(f"dvc add {filePath}")
+            os.system(f"dvc add {filePath}")
+
+    print("\n #### all files added to dvc ####")
+    ```
 
 ## STEP 8 Do the first commit and push to the remote repository
 run below commands on by one -
