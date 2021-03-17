@@ -1,10 +1,10 @@
 # Project information
 site_name: WAFER ML-OPS docs
-# defeine TOC or order of website-
+# define TOC or order of website-
 nav:
   - Home: index.md
   - Project: project.md
-  - Pipeline Stage 1: stage1.md
+  - Pipeline Stage 1 (Initial setup): stage1.md
   - Reference: reference.md
 
 site_author: Sunny Bhaveen Chandra

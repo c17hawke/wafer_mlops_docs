@@ -1,4 +1,4 @@
-# Stage 1: Data preparation (Day 1)
+# Stage 1: Data preparation (Day 1: Initial setup)
 
 ## Steps and important commands to begin-
 
