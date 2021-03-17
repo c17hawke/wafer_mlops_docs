@@ -95,8 +95,8 @@ Once you are done with above step you'll see a following directory structure ins
 ---
 Now open the project in your favorite code editor.
 
-## STEP 3
-### Get the dataset 
+## STEP 3 Get the dataset 
+
 * Clone it from the [dataset repository](https://github.com/iNeuron-Pvt-Ltd/wafer-dataset) or directly- 
 
 >> [Download Dataset](https://github.com/iNeuron-Pvt-Ltd/wafer-dataset/archive/main.zip){ .md-button } 
@@ -183,7 +183,21 @@ git add .dvc/config && git commit -m "Configure remote storage"
 
     ![](https://github.com/c17hawke/wafer_mlops_docs/blob/main/docs/img/gdrive_id.png?raw=true)
 
-## STEP 11 Add Gdrive credential secrets in github repo secrets. 
+## STEP 11 Push the data to the remote storage-
+
+```bash
+dvc push
+```
+
+* This step will ask you to authenticate yourself by clicking on the link which will appear in the terminal.
+
+* Once you allow dvc to read and write on gdrive it'll give an access token which you'll paste in the terminal.
+
+* Now the copy of your data will be pushed to the gdrive
+
+* Above step will create a gdrive credential file (Now check next step).
+
+## STEP 12 Add Gdrive credential secrets in github repo secrets. 
 * Find this credentials in the given path - 
 
     `.dvc >> temp >> gdrive-user-credentials.json`
@@ -196,20 +210,15 @@ git add .dvc/config && git commit -m "Configure remote storage"
     * Give name of secretes
     * Paste the json file content from `gdrive-user-credentials.json`
 
-## STEP 12 Push the data to remote -
 
-```bash
-dvc push
-```
-
-!!! Info "To retrieved data"
+!!! Info "To retrieve data anytime"
     ```bash
     dvc pull
     ```
 
     refer [dvc-data-versioning](https://dvc.org/doc/start/data-versioning) to know more
 
-## STEP 11 Install full requirements.txt as given in the repository
+## STEP 13 Install full requirements.txt as given in the repository
 ```bash
 pip install -r requirements.txt
 ```
@@ -218,6 +227,6 @@ pip install -r requirements.txt
     ```bash
     git add README.md && git commit -m "update readme" && git push origin dev
     ```
-## STEP 12 Now you can follow along after this point as shown in the following video -
+## STEP 14 Now you can follow along after this point as shown in the following video -
 
 <iframe width="630" height="330" src="https://www.youtube.com/embed/Ly3Dor8HZUA?start=6883" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
