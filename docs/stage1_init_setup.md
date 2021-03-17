@@ -1,10 +1,14 @@
 # Stage 1: Data preparation (Day 1: Initial setup)
 
+---
+
 ## Main repository link:
 * On top right corner next to the search bar link for the main repo is given or [click here]() to see the main repo
 
 !!! Note
     The main repo contains various branch so make sure you select a branch which has the latest commit to see the recent updates.
+
+---
 
 ## Steps and important commands to begin-
 
@@ -41,7 +45,8 @@ conda activate <your_env_name>
 
 Once you are done with above step you'll see a following directory structure inside a directory by your given *project_name*
 
-### Project Organization
+??? Info "Click to see Project Organization"
+    ```
     ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
     ├── README.md          <- The top-level README for developers using this project.
@@ -86,7 +91,7 @@ Once you are done with above step you'll see a following directory structure ins
     │       └── visualize.py
     │
     └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
-
+    ```
 ---
 Now open the project in your favorite code editor.
 
