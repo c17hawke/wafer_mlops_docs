@@ -1,4 +1,4 @@
-# Stage 1: Data preparation
+# Stage 1: Data preparation (Day 1)
 
 ## Steps and important commands to begin-
 
@@ -82,7 +82,7 @@ Once you are done with above step you'll see a following directory structure ins
     └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
 
 ---
-Now open the project in your favourite code editor.
+Now open the project in your favorite code editor.
 
 ## STEP 3
 ### Get the dataset 
@@ -105,7 +105,7 @@ pip install dvc
 pip install dvc[gdrive]
 ```
 
-## STEP 6 Intialize DVC
+## STEP 6 Initialize DVC
 ```bash
 dvc init
 ```
@@ -145,8 +145,8 @@ dvc remote add -d storage gdrive://<DRIVE ID>
 git add .dvc/config && git commit -m "Configure remote storage"
 ```
 !!! NOTE 
-    Get the <DRIVE ID> as shown in the higlighted part in the below screenshot-
-    
+    Get the <DRIVE ID> as shown in the highlighted part in the below screenshot-
+
     ![](https://github.com/c17hawke/wafer_mlops_docs/blob/main/docs/img/gdrive_id.png?raw=true)
 
 ## STEP 11 Add Gdrive credential secrets in github repo secrets. 
@@ -168,7 +168,7 @@ git add .dvc/config && git commit -m "Configure remote storage"
 dvc push
 ```
 
-!!! Info "To retrived data"
+!!! Info "To retrieved data"
     ```bash
     dvc pull
     ```
@@ -184,6 +184,6 @@ pip install -r requirements.txt
     ```bash
     git add README.md && git commit -m "update readme" && git push origin dev
     ```
-## STEP 12 Now you can follow along after this point as shown in the folowing video -
+## STEP 12 Now you can follow along after this point as shown in the following video -
 
 <iframe width="630" height="330" src="https://www.youtube.com/embed/Ly3Dor8HZUA?start=6883" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
